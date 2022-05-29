@@ -84,7 +84,9 @@ test('should match expected exports', () => {
 
     // input
     'Input',
+    'InputAdornment',
     'InputBase',
+    'InputControl',
     'InputGroup',
     'InputGroupAddon',
     'InputGroupAppend',
@@ -98,6 +100,7 @@ test('should match expected exports', () => {
     // menu
     'Menu',
     'MenuButton',
+    'MenuContent',
     'MenuDivider',
     'MenuGroup',
     'MenuItem',

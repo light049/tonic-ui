@@ -2,9 +2,12 @@ import { Global, css } from '@emotion/react';
 import { mdx } from '@mdx-js/react';
 import { sx } from '@tonic-ui/styled-system';
 import * as reactComponents from '@tonic-ui/react';
+import * as reactLabComponents from '@tonic-ui/react-lab';
 import * as reactHooks from '@tonic-ui/react-hooks';
 import * as tmicon from '@trendmicro/tmicon';
 import { boolean } from 'boolean';
+import * as dateFns from 'date-fns'
+import * as dateFnsLocale from 'date-fns/locale'
 import update from 'immutability-helper';
 import React, { useCallback, useState } from 'react';
 import * as ReactBeautifulDND from 'react-beautiful-dnd';
@@ -30,6 +33,8 @@ const thirdPartyComponents = {
   ReactDND,
   ReactDNDHtml5backend,
   ReactMovable,
+  dateFns,
+  dateFnsLocale,
   update, // XXX: rename to immutableUpdate
   ...ReactTable, // XXX: rename to ReactTable.xxx
 };
@@ -159,6 +164,7 @@ const CodeBlock = ({
     transformCode: code => code,
     scope: {
       ...reactComponents,
+      ...reactLabComponents,
       ...reactHooks,
       ...thirdPartyComponents,
       Code,
